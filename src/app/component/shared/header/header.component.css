@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 30%;
+  margin: auto;
+  padding: 0.5rem;
+}
+
+h1{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 4rem;
+
+}
+
+.text-logo{
+  color: rgb(40, 77, 88);
+  text-shadow: 0.3rem 0.3rem 0.3rem rgb(2, 168, 224);
+}
+
+h3{
+  letter-spacing: 0.25rem;
+}

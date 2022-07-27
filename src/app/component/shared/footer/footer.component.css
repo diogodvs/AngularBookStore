@@ -1,0 +1,17 @@
+p{
+  color: grey;
+  padding: 1rem;
+}
+
+a{
+  margin: 2rem 2rem 0;
+  color: grey;
+}
+.list-links{
+  width: 33%;
+  margin: auto;
+}
+footer{
+  margin-top: 5rem;
+  border-radius: 0.5rem;
+}
