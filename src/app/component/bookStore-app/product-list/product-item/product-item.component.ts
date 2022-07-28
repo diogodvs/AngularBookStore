@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Book } from '../model/book';
+import { Book } from '../model/books.model';
 
 @Component({
   selector: 'app-product-item',
@@ -8,8 +8,12 @@ import { Book } from '../model/book';
 })
 export class ProductItemComponent implements OnInit {
 
+  url : string = "";
+
+
   @Input()
   livro!: Book;
+
   constructor() { }
 
   ngOnInit(): void {

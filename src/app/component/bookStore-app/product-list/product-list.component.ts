@@ -1,5 +1,7 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { BookService } from './product-list.component.service';
+import { Book } from './model/books.model';
+import { BooksService } from './product-list.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,20 +11,26 @@ import { BookService } from './product-list.component.service';
 export class ProductListComponent implements OnInit {
 
   livros: any;
-  bookService: BookService;
 
-  constructor(bookService: BookService) {
+  booksService: BooksService;
 
-    this.bookService = bookService;
-  }
+  constructor(  booksService: BooksService) {
+
+    this.booksService = booksService;
+
+    // this.booksService = new BooksService();
+   }
 
   ngOnInit(): void {
 
-    this.livros = this.bookService.getBook().subscribe((data => {
+    this.livros = this.booksService.getBooks().subscribe((data => {
       this.livros = data;
-      console.log(this.livros)
+      console.log(this.livros);
     }))
 
   }
 
+
 }
+
+

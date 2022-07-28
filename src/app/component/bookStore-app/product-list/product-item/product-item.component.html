@@ -1,16 +1,21 @@
-<div class="card shadow-sm">
-  <img class="bd-placeholder-img card-img-top " width="100%" src='{{"assets/images/" + livro.img + ".jpg"}}' alt="">
+<link rel="stylesheet" href="./product-item.component.css">
 
-  <div class="card-body">
-    <p class="card-text">{{livro.name}}</p>
-    <p class="card-text">{{livro.category}}</p>
-    <p class="card-text">{{livro.quantity}}</p>
-    <p class="card-text">{{livro.price | currency: 'BRL'}} </p>
+<div class="card shadow-sm text-center mb-5 align-items-center">
+  <img class="bd-placeholder-img card-img-top row" width="300px" *ngIf="livro.img"  src='{{ "assets/images/" + livro.img + ".jpg" }}'>
 
-  <div class="btn-group">
-    <button type="button" class="btn btn-sm btn-primary">Comprar</button>
-    <button type="button" class="btn btn-sm btn-outline-primary">Detalhes</button>
+  <div class="card-body text-center">
+    <h4 class="card-text nome">{{ livro.name }}</h4>
+    <p class="card-text category">{{ livro.category }}</p>
+    <p class="card-text quantity">units: {{ livro.quantity }}</p>
+    <p class="card-text price">{{livro.price | currency:'BRL'}}</p>
+
+
+
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-primary">Comprar</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">Detalhes</button>
+      </div>
+    </div>
   </div>
-  </div>
-
 </div>
